@@ -1,0 +1,5 @@
+﻿Id,Requirement,Doc,Subject,maximumSpeed,minimumCapacity,minimumTorque,maximumMass,Constraint,Satisfy,Verify,Status
+,AssistedSpeedLimit,Pedal assistance shall be limited to the intended trail speed.,EMountainBike,25 [km/h],,,,bike.controller.maxAssistSpeed <= maximumSpeed,myEMountainBike,EMountainBikeVerification,open
+,BatteryCapacity,The battery shall provide enough charge for a substantial trail ride.,EMountainBike,,54000 [C],,,bike.battery.capacity >= minimumCapacity,myEMountainBike,EMountainBikeVerification,open
+,HillClimbTorque,The motor shall provide enough torque for steep trail sections.,EMountainBike,,,70 [N*m],,bike.motor.peakTorque >= minimumTorque,myEMountainBike,EMountainBikeVerification,open
+,TrailMassLimit,The complete bike shall be light enough for trail handling.,EMountainBike,,,,25 [kg],bike.frame.mass + bike.battery.mass + bike.motor.mass + bike.frontWheel.mass + bike.rearWheel.mass <= maximumMass,myEMountainBike,EMountainBikeVerification,open
